@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_return"
+        android:background="#00FF0000"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/btn_return"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가입"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/register_title"/>
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="1"
+    android:id="@+id/regist_table"
+    android:layout_below="@id/register_title"
+    android:layout_marginTop="20dp"
+    android:layout_centerHorizontal="true"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp">
+    <TableRow>
+        <TextView
+            android:text="ID : "
+            android:padding="8dp"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/edt_id"
+            android:singleLine="true"
+            android:hint="muzix@gmail.com"/>
+        <Button
+            android:text="@string/duplicate_check"
+            android:background="#00ff0000"
+            android:id="@+id/btn_duplicate_chk"
+            android:textStyle="bold"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="닉네임 : "
+            android:padding="8dp"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/edt_nickname"
+            android:singleLine="true"
+            android:hint="muzix"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="비밀번호 : "
+            android:padding="8dp"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/edt_pwd"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="******"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:text="비밀번호 확인 :"
+            android:padding="8dp"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/edt_pwd_chk"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="******"/>
+    </TableRow>
+</TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regist_table"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center">
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/btn_register"
+               android:background="#00FF0000"
+               android:text="@string/register" />
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/btn_unregister"
+               android:background="#00FF0000"
+               android:visibility="gone"
+               android:text="@string/unregister" />
+    </LinearLayout>
+</RelativeLayout>

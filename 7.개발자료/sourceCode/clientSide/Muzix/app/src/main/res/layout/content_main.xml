@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.muzix.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/search_list"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
+        android:textStyle="bold"
+        android:textColor="#173087"
+        android:text="최근 등록된 음악"
+        android:id="@+id/recent_music_txtview" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="등록된 음악이 없습니다."
+        android:id="@+id/no_recent_music_txt"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/recent_music_txtview"
+        android:gravity="center"
+        android:layout_marginTop="75dp"
+        android:visibility="gone"/>
+    <cn.trinea.android.view.autoscrollviewpager.AutoScrollViewPager
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/recent_music_txtview"
+        android:layout_marginTop="11dp"
+        android:id="@+id/home_recent_music_list" />
+<View
+    android:layout_width="match_parent"
+    android:layout_height="15dp"
+    android:background="@color/com_kakao_cancel_button_background"
+    android:layout_below="@id/home_recent_music_list"
+    android:layout_marginTop="5dp"
+    android:id="@+id/view1"/>
+    <TextView
+        android:id="@+id/my_music_list_txtview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/recent_music_txtview"
+        android:layout_below="@+id/view1"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:text="나의 음악"
+        android:textColor="#173087" />
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_music_list_txtview"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="등록된 음악이 없습니다."
+                android:id="@+id/no_my_music_txt"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:layout_marginTop="75dp"
+                android:visibility="gone"/>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_my_music_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

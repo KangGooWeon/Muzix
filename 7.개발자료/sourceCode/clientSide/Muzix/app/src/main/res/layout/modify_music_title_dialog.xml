@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="제목 수정"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#000000"
+        android:id="@+id/modify_music_title_123"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/modify_music_title_123"
+        android:background="#E6E6E6"
+        android:id="@+id/view7"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view7"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:layout_marginStart="11dp"
+        android:text="노래 제목"
+        android:id="@+id/txt_1"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edit_music_title"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/txt_1"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/confirm_modify_music_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/modify_music_title_cancel"
+        android:layout_alignBottom="@+id/modify_music_title_cancel"
+        android:layout_alignParentEnd="true"
+        android:background="#00ff0000"
+        android:text="수정"
+        android:textColor="#00A1FF"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/modify_music_title_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_music_title"
+        android:layout_marginTop="13dp"
+        android:layout_toStartOf="@+id/confirm_modify_music_title"
+        android:background="#00ff0000"
+        android:text="취소"
+        android:textColor="#00A1FF"
+        android:textStyle="bold" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_music_list"
+            android:icon="@drawable/ic_menu_music_list"
+            android:title="음악 목록" />
+        <item
+            android:id="@+id/nav_member_info"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="계정 설정" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_logout"
+            android:title="로그아웃" />
+    </group>
+</menu>
